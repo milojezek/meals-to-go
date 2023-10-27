@@ -1,6 +1,7 @@
 import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { StatusBar, StyleSheet, Text, View, SafeAreaView } from "react-native";
+import Searchbar from "./src/components/SearchBar";
 
 /**
  * SafeAreaView works on iOS only!
@@ -13,7 +14,7 @@ export default function App() {
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.search}>
-          <Text style={styles.text}>Search</Text>
+          <Searchbar />
         </View>
         <View style={styles.list}>
           <Text>list</Text>
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   search: {
-    backgroundColor: "green",
+    backgroundColor: "white",
     padding: 15,
     marginTop: StatusBar.currentHeight,
   },
