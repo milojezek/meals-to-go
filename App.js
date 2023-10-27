@@ -1,7 +1,6 @@
 import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import { StatusBar, StyleSheet, Text, View, SafeAreaView } from "react-native";
-import Searchbar from "./src/components/SearchBar";
+import { RestaurantsScreen } from "./src/features/restaurants/screens/RestaurantsScreen";
 
 /**
  * SafeAreaView works on iOS only!
@@ -12,32 +11,8 @@ import Searchbar from "./src/components/SearchBar";
 export default function App() {
   return (
     <>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.search}>
-          <Searchbar />
-        </View>
-        <View style={styles.list}>
-          <Text>list</Text>
-        </View>
-      </SafeAreaView>
+      <RestaurantsScreen />
       <ExpoStatusBar style="auto" />
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-  },
-  search: {
-    backgroundColor: "white",
-    padding: 15,
-    marginTop: StatusBar.currentHeight,
-  },
-  list: {
-    flex: 1,
-    backgroundColor: "blue",
-    padding: 15,
-  },
-});
