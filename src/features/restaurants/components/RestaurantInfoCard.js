@@ -2,22 +2,21 @@ import React from "react";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 
-const cardStyle = `
-  background-color: white;
-  padding: 10px;
-`;
-
 const InfoCard = styled(Card)`
-  ${cardStyle}
+  background-color: ${(props) => props.theme.colors.bg.primary};
+  padding: ${(props) => props.theme.space.get("medium")};
 `;
 
 const RestaurantCardCover = styled(Card.Cover)`
-  ${cardStyle}
+  background-color: ${(props) => props.theme.colors.bg.primary};
+  padding: ${(props) => props.theme.space.get("medium")};
 `;
 
 const Title = styled.Text`
   text-align: left;
-  margin-left: 10px;
+  margin-left: ${(props) => props.theme.space.get("medium")};
+  color: ${(props) => props.theme.colors.ui.primary};
+  font-family: ${(props) => props.theme.fonts.body};
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
